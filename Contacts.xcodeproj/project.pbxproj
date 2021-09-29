@@ -14,6 +14,11 @@
 		0FFD7F64256A5C28007A29C8 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD7F62256A5C28007A29C8 /* Contacts.xcdatamodeld */; };
 		0FFD7F66256A5C2A007A29C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD7F65256A5C2A007A29C8 /* Assets.xcassets */; };
 		0FFD7F69256A5C2A007A29C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD7F67256A5C2A007A29C8 /* LaunchScreen.storyboard */; };
+		0FFD7F73256A7712007A29C8 /* Contacts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD7F71256A7712007A29C8 /* Contacts+CoreDataClass.swift */; };
+		0FFD7F74256A7712007A29C8 /* Contacts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD7F72256A7712007A29C8 /* Contacts+CoreDataProperties.swift */; };
+		0FFD7F7B256A85F5007A29C8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD7F7A256A85F5007A29C8 /* CoreDataManager.swift */; };
+		0FFD7F81256A8718007A29C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD7F7F256A8718007A29C8 /* TableViewCell.swift */; };
+		0FFD7F82256A8718007A29C8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD7F80256A8718007A29C8 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		0FFD7F65256A5C2A007A29C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FFD7F68256A5C2A007A29C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FFD7F6A256A5C2A007A29C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FFD7F71256A7712007A29C8 /* Contacts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Contacts+CoreDataClass.swift"; path = "Contacts/Coredata/Contacts+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0FFD7F72256A7712007A29C8 /* Contacts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Contacts+CoreDataProperties.swift"; path = "Contacts/Coredata/Contacts+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0FFD7F7A256A85F5007A29C8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0FFD7F7F256A8718007A29C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0FFD7F80256A8718007A29C8 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 		0FFD7F58256A5C28007A29C8 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				0FFD7F7E256A8651007A29C8 /* Cells */,
+				0FFD7F79256A85E1007A29C8 /* Coredata */,
 				0FFD7F59256A5C28007A29C8 /* AppDelegate.swift */,
 				0FFD7F5B256A5C28007A29C8 /* SceneDelegate.swift */,
 				0FFD7F5D256A5C28007A29C8 /* ViewController.swift */,
@@ -68,6 +80,25 @@
 				0FFD7F62256A5C28007A29C8 /* Contacts.xcdatamodeld */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		0FFD7F79256A85E1007A29C8 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				0FFD7F7A256A85F5007A29C8 /* CoreDataManager.swift */,
+				0FFD7F72256A7712007A29C8 /* Contacts+CoreDataProperties.swift */,
+				0FFD7F71256A7712007A29C8 /* Contacts+CoreDataClass.swift */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
+		0FFD7F7E256A8651007A29C8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0FFD7F7F256A8718007A29C8 /* TableViewCell.swift */,
+				0FFD7F80256A8718007A29C8 /* TableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FFD7F69256A5C2A007A29C8 /* LaunchScreen.storyboard in Resources */,
+				0FFD7F82256A8718007A29C8 /* TableViewCell.xib in Resources */,
 				0FFD7F66256A5C2A007A29C8 /* Assets.xcassets in Resources */,
 				0FFD7F61256A5C28007A29C8 /* Main.storyboard in Resources */,
 			);
@@ -141,8 +173,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FFD7F64256A5C28007A29C8 /* Contacts.xcdatamodeld in Sources */,
+				0FFD7F81256A8718007A29C8 /* TableViewCell.swift in Sources */,
 				0FFD7F5E256A5C28007A29C8 /* ViewController.swift in Sources */,
+				0FFD7F74256A7712007A29C8 /* Contacts+CoreDataProperties.swift in Sources */,
 				0FFD7F5A256A5C28007A29C8 /* AppDelegate.swift in Sources */,
+				0FFD7F73256A7712007A29C8 /* Contacts+CoreDataClass.swift in Sources */,
+				0FFD7F7B256A85F5007A29C8 /* CoreDataManager.swift in Sources */,
 				0FFD7F5C256A5C28007A29C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
